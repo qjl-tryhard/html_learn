@@ -371,3 +371,286 @@ html中无法使用Enter实现换行
     
 
 ### 绝对路径-从**盘符**出发查找目标文件
+### 绝对路径-从**盘符**出发查找目标文件
+
+![image.png](attachment:68c48783-7bef-4eea-84d5-c69ab4d5c84b:image.png)
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 绝对路径访问图片 -->
+        <img src="C:\Users\www12\Desktop\yjtp.png" alt="图片加载失败">
+        <img src="C:/Users/www12/Desktop/yjtp.png" alt="图片加载失败">
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:e357063e-5068-4acc-82cd-e0c855a48f0f:image.png)
+    
+- 直接填写在线网址的图片url地址
+    - 代码演示
+        
+        ```html
+            <img src="http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960" alt="">
+        
+        ```
+        
+        ![image.png](attachment:e8e8fa35-f5c5-43a7-b2aa-5aee85778328:image.png)
+        
+
+### 友情链接
+
+跟自己网站有关系的网站。
+
+- 实现方式
+    - 使用对应网站的在线网址，一般使用**绝对路径**
+
+## 超链接
+
+### 跳转网页链接
+
+点击之后跳转页面
+
+- 相关标签
+    
+    ```html
+    <a href="https://www.baidu.com">跳转到百度</a>
+    
+    **<!--target="_blank"-->  该属性表示在新窗口跳转页面**
+    ```
+    
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 通过超链接跳转网站 -->
+        <a href="https://www.baidu.com" target="_blank">跳转到百度</a>
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:a6589ace-e555-4a61-9fad-ccdbc9d387e5:image.png)
+    
+
+### 跳转本地文件
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 通过超链接跳转网站 -->
+      
+        <a href="https://www.baidu.com" target="_blank">跳转到百度</a>
+        **<a href="../250512/06-段落标签.html">跳转到06</a>**
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:4b467384-0b42-4087-923c-00846dd36f00:image.png)
+    
+
+<aside>
+💡
+
+**在开发初期，不知道超链接的跳转地址，href属性值写#，表示空链接，不会跳转**
+
+</aside>
+
+- 代码演示
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 通过超链接跳转网站 -->
+    <a href="https://www.baidu.com" target="_blank">跳转到百度</a>
+    <a href="../250512/06-段落标签.html">跳转到06</a>
+    **<a href="#">空链接</a>**
+</body>
+</html>
+```
+
+![image.png](attachment:444e063c-74f3-4d9e-8b04-efd294ec869d:image.png)
+
+## 音频标签
+
+- 标签
+    
+    ```html
+    <audio src="音频的URL"></audio>
+    ```
+    
+- 常见属性
+    
+    
+    | 属性 | 作用 | 特殊说明 |
+    | --- | --- | --- |
+    | **src（必须熟悉）** | **音频URL** | **支持格式：MP3、Ogg、Wav** |
+    | controls | 显示音频控制面板 |  |
+    | loop | 循环播放 |  |
+    | autoplay | 自动播放 | 为了提升用户体验，浏览器一般会禁用自动播放功能 |
+    
+    ![image.png](attachment:4740f7e5-fcf6-464e-9376-2dbcdb9ab39f:image.png)
+    
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 加载音频文件 -->
+        **<!-- 在html5中，如果属性名与属性值完全一样，可以简写为一个单词-->**
+        <audio src="./media/周杰伦-花海.mp3" controls></audio>
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:05badbca-04c9-4c3b-880b-a9811cecd571:image.png)
+    
+
+## 视频标签
+
+- 标签
+
+```html
+<video src="视频的URL"></video>
+```
+
+- 常见属性
+    
+    
+    | 属性 | 作用 | 特殊说明 |
+    | --- | --- | --- |
+    | src（必须属性） | 视频URL | 支持格式MP4、WebM、Ogg |
+    | controls | 显示视频控制面板 |  |
+    | loop | 循环播放 |  |
+    | muted | 静音播放 |  |
+    | autoplay | 自动播放 | 为了提示用户体验，浏览器支持在**静音状态**自动播放 |
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 视频 -->
+        <video src="./media/mda-na2gcpqhw9v8xn54.mp4" controls loop autoplay muted>视频</video>
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:229d5229-eaf4-4c2f-8925-a9522f16b9d2:image.png)
+    
+
+## 案例1
+
+<aside>
+💡
+
+网页制作的思路
+
+**从上到下，先整体再局部，逐步分析制作**
+
+分析内容→写代码→保存→刷新浏览器，看效果  写一个看一个
+
+整体到局部的思路例如：先完成段落，再完成段落中的超链接
+
+</aside>
+
+- 案例代码
+    
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>案例1</h1>
+        <hr>
+        <p>在一片宁静的森林边缘，有一个小小的<a href="./17-案例2.html">村落</a>，村子里的房子错落有致地分布着，
+            屋顶上的烟囱偶尔会冒出几缕轻烟，仿佛在诉说着家的温暖。
+            村子中央有一口古老的井，传说这口井有着神奇的力量，
+            能够实现诚心诚意之人的愿望。村民们虽然过着简单的生活，
+            但他们彼此之间充满了关爱与帮助，每当夜幕降临，星空下的村子就会响起悠扬的歌声和孩子们欢快的笑声。
+            在这个快节奏的世界里，这个小村落宛如一颗被遗忘的明珠，静静地散发着它独有的光芒，向每一个愿意聆听的人讲述着关于友情、爱与希望的故事。</p>
+        <img src="./村庄.jpg" alt="图像无法加载" title="这是一个村庄" width="300">
+        <h2>村庄介绍</h2>
+        <p><ins>在这幅美丽的夜景图中，我们看到的是一个宁静而温馨的村庄。</ins><strong>村庄被茂密的森林环绕，仿佛与世隔绝，营造出一种神秘而又安详的氛围。夜幕降临，星空璀璨，点缀着深蓝色的天空，几朵轻盈的云彩悠然飘过。</strong>
+    
+    村庄中的房屋以传统的木结构为主，<em>屋顶覆盖着厚厚的茅草，烟囱中升起袅袅炊烟，透露出家的温暖和生活的气息。</em>每栋房子的窗户都透出柔和的灯光，照亮了周围的环境，让人感受到一种亲切和舒适。房屋之间的小径蜿蜒曲折，连接着每一户人家，显得格外和谐。
+    
+    在村庄的中心，有一个石砌的水井，周围摆放着几张简朴的长椅和桌子，村民们围坐在一起，享受着夜晚的凉爽和彼此的陪伴。孩子们在嬉戏玩耍，大人们则在交谈、喝茶或分享故事，整个场景充满了欢声笑语和家庭的温馨。
+    
+    这个村庄不仅是一个居住的地方，更是一个充满人情味和社区精神的家园。<del>在这里，时间似乎放慢了脚步，让人们能够远离城市的喧嚣，回归自然，享受简单而美好的生活。无论是那温暖的灯光，还是村民们之间的互动，都让人感受到一种深深的归属感和幸福感。</del></p>
+        <h2>村庄人口</h2>
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:fc43dcc2-166c-40a1-b14f-2c2c0b582c7f:image.png)
+    
+
+## 案例2-加入视频音频
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>美丽的<a href="./16-案例1.html" target="_blank">村庄</a></h1>
+    <p>村庄被茂密的森林环绕，仿佛与世隔绝，营造出一种神秘而又安详的氛围。夜幕降临，星空璀璨，点缀着深蓝色的天空，几朵轻盈的云彩悠然飘过。</p>
+    <h2>添加歌曲</h2>
+    <audio src="./media/周杰伦-花海.mp3" controls ></audio>
+    <h2>通过视频介绍村庄</h2>
+    <p>村庄中的房屋以传统的木结构为主，屋顶覆盖着厚厚的茅草，烟囱中升起袅袅炊烟，透露出家的温暖和生活的气息。
+        每栋房子的窗户都透出柔和的灯光，照亮了周围的环境，让人感受到一种亲切和舒适。房屋之间的小径蜿蜒曲折，连接着每一户人家，显得格外和谐。</p>
+    <video src="./media/mda-na2gcpqhw9v8xn54.mp4" controls muted autoplay></video>
+</body>
+</html>
+```
+
+![image.png](attachment:6e9c015a-87fe-4953-a705-26620238bb2f:image.png)
+
