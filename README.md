@@ -654,3 +654,167 @@ html中无法使用Enter实现换行
 
 ![image.png](attachment:6e9c015a-87fe-4953-a705-26620238bb2f:image.png)
 
+# 第二天
+
+## 列表、表格、表单
+
+- 应用场景
+    
+    ![image.png](attachment:81fbaf89-4fdd-42d2-a1b9-7c7dbab221ab:image.png)
+    
+
+<aside>
+💡
+
+**三个标签都是嵌套关系**
+
+</aside>
+
+- 列表
+    - 作用
+        - 布局内容排列整齐的区域
+    - 分类
+        - 分为**无序列表（工作常用）**、有序列表、定义列表。
+    
+    ![image.png](attachment:69de7845-e8fa-46ba-8ff4-baedc790f635:image.png)
+    
+    - **无序列表**
+        
+        作用：布局排列整齐的不需要规定顺序的区域
+        
+        标签：
+        
+        ```html
+        ul嵌套li，ul是无序列表，li是列表条目
+        
+        <ul>
+        	<li>第一项</li>
+        	<li>第二项</li>
+        	<li>第三项</li>
+        	......
+        </ul>
+        ```
+        
+        - 代码演示
+            
+            ```html
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+            </head>
+            <body>
+                <ul>
+                    <li>第一项</li> 独占一行
+                    <li>第二项</li>
+                    <li>第三项</li>
+                </ul>
+            </body>
+            </html>
+            ```
+            
+            ![image.png](attachment:f724198a-4ab0-4c6d-97e2-a89521d3a2e2:image.png)
+            
+        
+        <aside>
+        💡
+        
+        **ul标签里面只能包裹li标签**
+        
+        **li标签中可以包裹任意内容**
+        
+        </aside>
+        
+    - 有序列表
+        
+        作用：**布局排列整齐需要规定顺序的区域**
+        
+        ```html
+        ol嵌套li，ol是有序列表，li是列表条目
+        
+        <ol>
+        	<li>第一项</li>
+        	<li>第二项</li>
+        	<li>第三项</li>
+        	......
+        </ol>
+        ```
+        
+        - 代码演示
+            
+            ```html
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+            </head>
+            <body>
+                <ol>
+                    <li>第一项</li>
+                    <li>第二项</li>
+                    <li>第三项</li>
+                </ol>
+            </body>
+            </html>
+            ```
+            
+            ![image.png](attachment:5b5dc767-4119-4671-a253-996eaa0f2851:image.png)
+            
+        
+        <aside>
+        💡
+        
+        **ul标签里面只能包裹li标签**
+        
+        **li标签中可以包裹任意内容**
+        
+        </aside>
+        
+    - 定义列表
+        
+        标签：dl嵌套dt和dd，dl是定义**列表**，dt定义**列表的标题**，dd是定义列表的**描述/详情**。
+        
+        ```html
+        <dl>
+        	<dt>列表标题</dt>
+        	<dd>列表描述/详情</dd>
+        	......
+        </dl>
+        ```
+        
+        - 代码演示
+            
+            ```html
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+            </head>
+            <body>
+                <dl>
+                    <dt>服务中心</dt>
+                    <dd>申请售后</dd>
+                </dl>
+            </body>
+            </html>
+            ```
+            
+            ![image.png](attachment:2b1dc44c-a9db-40ea-95bf-f69e532aab07:image.png)
+            
+        
+        <aside>
+        💡
+        
+        **dl标签里面只能包裹dt和dd标签**
+        
+        **dt和dt标签中可以包裹任意内容**
+        
+        </aside>
+
+
