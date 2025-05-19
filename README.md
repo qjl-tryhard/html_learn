@@ -816,5 +816,652 @@ html中无法使用Enter实现换行
         **dt和dt标签中可以包裹任意内容**
         
         </aside>
+## 表格
 
+网页中的表格与Excel表格类似，用来**展示数据**
+
+- 标签内容
+    
+    **table**嵌套**tr**，**tr**嵌套**td/th**
+    
+    | 标签名 | 说明 |
+    | --- | --- |
+    | table | 表格 |
+    | tr | 行 |
+    | th | 表头单元格 |
+    | td | 内容单元格 |
+
+<aside>
+💡
+
+提示：在网页中，**表格默认没有边框线**，使用**border**属性可以为表格添加边框线。
+
+**快捷键复制：shift + alt +上下        在上方或下方复制**
+
+</aside>
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table border="1px">
+            <!-- 行 -->
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+            </tr>
+            <tr>
+                <td>张三</td>
+                <td>男</td>
+            </tr>
+        </table>
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:faf428aa-5345-4177-81f2-68302558619d:image.png)
+    
+
+## 表格结构标签 - 了解
+
+作用：用表格结构标签把内容划分区域，让表格结构更清晰，语义更清晰。（不显示在浏览器中，只为让结构更清晰。）
+
+- 标签
+    
+    
+    | 标签名 | 含义 | 特殊说明 |
+    | --- | --- | --- |
+    | thead | 表格头部 | 表格头部内容 |
+    | tbody | 表格主题 | 主要内容区域 |
+    | tfoot | 表格底部 | 汇总信息区域 |
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>语文</th>
+                    <th>数学</th>
+                    <th>总分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>99</td>
+                    <td>100</td>
+                    <td>199</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>98</td>
+                    <td>100</td>
+                    <td>198</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>总结</td>
+                    <td>全市第一</td>
+                    <td>全市第一</td>
+                    <td>全市第一</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:86cdc73d-8a2e-46e7-91f5-c28d409e5853:image.png)
+    
+
+## 合并单元格
+
+作用：将**多**个单元格合并为一个单元格，以**合并同类信息**。
+
+- 分类
+    - 跨行合并
+    - 跨列合并
+- 操作步骤
+    1. 明确要合并的目标
+    2. 保留**最左或者最上**的单元格，添加属性（取值为**数字**，表示需要合并的**单元格数量**）
+        
+        跨行合并，保留**最上**单元格，添加属性**rowspan**
+        
+        跨列合并，保留**最左**单元格，添加属性**colspan**
+        
+    3. 删除其他单元格
+
+<aside>
+💡
+
+**不能跨结构标签进行合并！！！**
+
+</aside>
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>语文</th>
+                    <th>数学</th>
+                    <th>总分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>99</td>
+                    **<td rowspan="2">100</td>**
+                    <td>199</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>98</td>
+                    **<!-- <td>100</td> -->**
+                    <td>198</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>总结</td>
+                    **<td colspan="3">全市第一</td>
+                    <!-- <td>全市第一</td> -->
+                    <!-- <td>全市第一</td> -->**
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:1b46aac9-dfa3-4347-9f7b-76e958527bf1:image.png)
+    
+
+## 表单
+
+- 作用：收集用户信息
+- 使用场景：
+    - 登录页面
+    - 注册页面
+    - 搜索区域
+
+### input标签基本使用
+
+- input标签**type属性值不同，则功能不同**。
+    
+    ```html
+    <input type="...">
+    ```
+    
+- type属性值及其说明
+    
+    
+    | type属性值 | 说明 |
+    | --- | --- |
+    | text | 文本框，用于输入**单行**文本 |
+    | password | 密码框 |
+    | radio | 单选框 |
+    | checkbox | 多选框 |
+    | file | 上传文件 |
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>input的基本使用</title>
+    </head>
+    <body>
+        输入框:<input type="text">
+        <br><br>
+        密码: <input type="password">
+        <br><br>
+        单选框: <input type="radio">
+        <br><br>
+        多选框：<input type="checkbox">
+        <br><br>
+        上传文件：<input type="file">
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:43882de2-5471-4fb8-a70d-2f748f50d1fa:image.png)
+    
+
+### input文本占位文本
+
+类似下图：
+
+![image.png](attachment:fb921a6d-b6bf-4a44-8042-e1322df712e6:image.png)
+
+```html
+<input type="..." placeholder="提示信息">
+```
+
+文本框与密码框都可以使用
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>input占位文本</title>
+    </head>
+    <body>
+        文本框：<input type="text" placeholder="请输入用户名">
+        <br><br>
+        密码：<input type="password" placeholder="请输入密码">
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:93309fa3-5327-447b-88db-20f2b179f19d:image.png)
+    
+
+### 单选框 radio
+
+- 常用属性
+    
+    
+    | 属性名 | 作用 | 特殊说明 |
+    | --- | --- | --- |
+    | name | 控件名称 | 控件分组，同组只能选中一个（单选功能） |
+    | checked | 默认选择 | 属性名和属性值相同，简写为一个单词 |
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>单选框 radio</title>
+    </head>
+    <body>
+        <input type="radio" name="gender" checked> 男
+        <input type="radio" name="gender"> 女
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:f38e2c2a-b36b-402f-bc36-e7f1ae3e70ee:image.png)
+    
+
+### 上传文件-file
+
+默认情况下，文件上传表单控件只能上传一个文件，添加**multiple**属性可以实现**文件多选**功能
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>上传多个文件</title>
+    </head>
+    <body>
+        上传文件：**<input type="file" multiple>**
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:6fb0ff95-edba-475e-b4b3-6fb7dead4885:image.png)
+    
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传多个文件</title>
+</head>
+<body>
+    上传文件：<input type="file" multiple>
+    
+</body>
+</html>
+```
+
+### 多选框-checkbox
+
+多选框也叫**复选框**
+
+默认选中：**checked**
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 多选框默认选中功能 -->
+        兴趣爱好：<input type="checkbox"> 敲代码
+        <input type="checkbox" checked> 敲前端代码
+        <input type="checkbox" checked> 敲前端Html代码
+                
+                
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:af88d902-5a99-4029-b545-f8a293956dde:image.png)
+    
+
+### 下拉菜单
+
+节省页面空间
+
+- 标签
+    
+    **select**嵌套option,**select是下拉菜单整体，option是下拉菜单的每一项**
+    
+
+![image.png](attachment:974eb379-5c0f-417d-839f-51c2a1170841:image.png)
+
+<aside>
+💡
+
+**如果需要默认，则在某个option后加selected即可！！！**
+
+</aside>
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>下拉框</title>
+    </head>
+    <body>
+        <select>
+            <option>北京</option>
+            <option>上海</option>
+            <option>徐州</option>
+            <option>广州</option>
+            <option selected>聊城</option>
+        </select>
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:90eba80c-8ec4-4405-bbd7-56892986cfb8:image.png)
+    
+
+### 文本域
+
+作用：**多行**输入文本的表单控件
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>文本域</title>
+    </head>
+    <body>
+        <!-- 右下角的拖拽功能在实际工作中会被禁用 
+        并会使用CSS设计尺寸，而不是使用属性设置-->
+        <textarea >请输入评论</textarea>
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:eb5e36ef-6176-4daa-841c-535eb58db363:image.png)
+    
+
+### label标签
+
+作用：网页中，某个标签的说明文本
+
+![image.png](attachment:1f6fd8cd-1fea-4131-bf2c-b7d6d4aa60f8:image.png)
+
+经验：用label标签绑定文字和表单控件的关系，**增大表单控件的点击范围**。
+
+- 代码演示
+    
+    ```html
+    第一种写法
+    - label标签只包裹内容，不包裹表单控件
+    - 设置label标签的**for**属性值和表单控件的**id**属性值**相同（增大点击范围）
+    <input type="radio" id="man"> 
+    <label for="man">男</label>**
+    
+    第二种写法
+    - 使用label标签包裹文字和表单控件，不需要属性
+    **<label><input type="radio">女</label>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>label标签-增大点击范围</title>
+    </head>
+    <body>
+        <input type="radio" name="gender" id="man">
+        <label for="man">男</label>
+        <!-- <input type="radio" name="gender" checked> 女 -->
+        <label ><input type="radio" name="gender" checked>女</label>
+    </body>
+    </html>**
+    
+    ```
+    
+
+<aside>
+💡
+
+支持label标签增大点击范围的表单控件：**文本框、密码框、上传文件、单选框、多选框、下拉菜单、文本域**等等
+
+</aside>
+
+![image.png](attachment:27787673-8d83-4342-99fe-62f272cc8846:image.png)
+
+### 按钮-button
+
+作用：登录功能
+
+- 标签
+    
+    ```html
+    <button type="">按钮</button>
+    ```
+    
+- type属性
+    
+    
+    | type属性值 | 说明 |
+    | --- | --- |
+    | submit | 提交按钮，点击后可以提交数据到后台（默认功能） |
+    | reset | 重置按钮，点击后将表单控件恢复默认值 |
+    | button | 普通按钮，默认没有功能，一般配合Javascript使用 |
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        **<!-- 都需要使用form表单包裹 
+         action属性表示要提交到的地址-->
+        <form action="">
+        <!-- 创建输入框 -->
+        用户名：<input type="text">
+        <br>
+        密码：<input type="password">
+        <br>
+        <!-- 创建按钮 -->
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+        <button type="button">按钮</button>
+        </form>**
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:6563f577-b9b2-441e-b4e1-ab7fb21639a2:image.png)
+    
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 都需要使用form表单包裹 
+     action属性表示要提交到的地址-->
+    <form action="">
+    <!-- 创建输入框 -->
+    用户名：<input type="text">
+    <br>
+    密码：<input type="password">
+    <br>
+    <!-- 创建按钮 -->
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+    <button type="button">按钮</button>
+    </form>
+</body>
+</html>
+```
+
+## 无语义的布局标签
+
+- 作用：**布局网页**（划分网页区域，摆放内容）
+    - **div**：独占一行
+    - **span**：不换行
+- 标签
+    
+    ```html
+    <div>div标签，独占一行</div>
+    <span>span标签，不换行</span>
+    ```
+    
+- 代码演示
+    
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>无语义的标签布局-div/span</title>
+    </head>
+    <body>
+        <!-- 独占一行的大盒子 -->
+        <div>div标签</div>
+        <div>div标签</div>
+        <div>div标签</div>
+        <!-- 不换行的小盒子 -->
+        <span>span标签</span>
+        <span>span标签</span>
+        <span>span标签</span>
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:ebf91598-1462-4dd7-9062-187baf6e63e0:image.png)
+    
+
+## 字符实体
+
+作用：在网页中**显示预留字符**
+
+例如：当敲多个空格时，浏览器只显示一个空格
+
+要显示原<p>时
+
+| 显示结果 | 描述 | 实体名称 |
+| --- | --- | --- |
+|  | 空格 | **&**nbsp; |
+| < | 小于号 | &lt; |
+| > | 大于号 | &gt; |
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>字符实体</title>
+    </head>
+    <body>
+        乾坤未定，你我皆是牛&nbsp;&nbsp;&nbsp;&nbsp;马
+        <br>
+        &lt;p&gt;
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:c5f4fe79-7e92-47e9-b5cc-0540e7c96327:image.png)
+    
+
+## 综合案例-1
+
+![image.png](attachment:29883441-165f-44eb-a47b-2ffb2545aacc:image.png)
+
+![image.png](attachment:b744f6e8-d70b-4455-a70d-6236bb5148a8:image.png)
 
