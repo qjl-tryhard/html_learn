@@ -1464,4 +1464,438 @@ html中无法使用Enter实现换行
 ![image.png](attachment:29883441-165f-44eb-a47b-2ffb2545aacc:image.png)
 
 ![image.png](attachment:b744f6e8-d70b-4455-a70d-6236bb5148a8:image.png)
+## 综合案例-2
 
+注册信息的构建
+
+- 代码实现
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>综合案例2</title>
+    </head>
+    <body>
+        <!-- 注册信息的相关构建 -->
+        <h1>注册信息</h1>
+        <h2>个人信息</h2>
+        <form>
+            姓名：<input type="text" placeholder="请输入姓名">
+            <br>
+            <br>
+            密码：<input type="password" placeholder="请输入密码">
+            <br>
+            <br>
+            确认密码：<input type="password" placeholder="请再次输入密码">
+            <br>
+            <br>
+            性别：<label><input type="radio" name="gender" > 男</label>
+            <label><input type="radio" name="gender" checked> 女</label>
+                <!-- <input type="radio" name="gender" checked> 女 -->
+            <br>
+            <br>
+            居住城市：<select name="" id="">
+                <option value="" selected>北京</option>
+                <option value="">徐州</option>
+                <option value="">南京</option>
+                <option value="">聊城</option>
+            </select>
+    
+            <h2>教育经历</h2>
+            最高学历：<select name="" id="">
+                <option value="" selected>博士</option>
+                <option value="">硕士</option>
+                <option value="">本科</option>
+                <option value="">专科</option>
+            </select>
+            <br>
+            <br>
+            学校名称：<input type="text">
+            <br>
+            <br>
+            所学专业：<input type="text">
+            <br>
+            <br>
+            在校时间：<select name="" id="">
+                <option value="">2015</option>
+                <option value="">2016</option>
+                <option value="">2017</option>
+                <option value="">2018</option>
+            </select>
+            --
+            <select name="" id="">
+                <option value="">2019</option>
+                <option value="">2020</option>
+                <option value="">2021</option>
+                <option value="">2022</option>
+            </select>
+    
+            <h2>工作经历</h2>
+            公司名称：<input type="text">
+            <br>
+            <br>
+            工作描述：
+            <br>
+            <textarea name="" id="" ></textarea>
+            <br>
+            <br>
+            <input type="checkbox">已阅读并同意以下协议：
+            <ul>
+                <li><a href="https://www.baidu.com">《用户服务协议》</a></li>
+                <li><a href="https://www.baidu.com">《隐私政策》</a></li>
+            </ul>
+            <br>
+            <br>
+            <button type="submit">免费注册</button>
+            <button type="reset">重新填写</button>
+        </form>
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:96b38ab2-70a4-479f-ada7-0ed1eb646903:image.png)
+    
+
+# 第三天 CSS的学习
+
+## CSS初体验
+
+- 定义
+    
+    **层叠样式表**，是一种**样式表**语言，用来描述**HTML文档的呈现（美化内容）**。
+    
+- 书写位置：head标签里面，title标签下方添加style双标签，style标签里面书写CSS代码。
+
+```html
+<title>CSS初体验</title>
+	<style>
+	 /*选择器{}样式*/
+	 p {
+		 /*CSS属性*/	 
+		 color:red;
+		 }
+	 
+	</style> 
+	
+	
+<p>体验CSS</p>
+```
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>初始CSS</title>
+        <style>
+            p {
+    		        /* 颜色调整 */
+    		        /* 属性名与属性值成对出现-》键值对 */
+                color: red;
+                /* 字体变大 */
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>体验CSS</p>
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:8caebbbc-bb85-4a6b-8fb4-5dc0bb6d5ec9:image.png)
+    
+    ![image.png](attachment:953fcf57-21b4-430f-87b1-cbd04a1fba05:image.png)
+    
+
+## CSS引入方式
+
+- 内部样式表：学习使用
+    - CSS代码写在style标签中
+- 外部样式表：开发使用
+    - CSS代码写在单独的CSS文件中（**.css**）
+    - 在HTML使用Link标签引入
+        
+        ```html
+        **<link rel="stylesheet" href="./my.css">**
+        ```
+        
+- 行内样式：配合JavaScript使用
+    - CSS写在标签style属性值里
+        
+        ```html
+        **<div style="color:red; font-size:20px">这是div标签</div>**
+        ```
+        
+
+- 代码演示
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- link引入外部样式表 -->
+        <link rel="stylesheet" href="./my.css">
+    </head>
+    <body>
+        <p>这是一个p标签</p>
+        <!-- 行内样式，配合JS使用 -->
+        <div style="color: blue; font-size: 30px;">这是一个div标签</div>
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:ec3581c3-8444-4ccb-abba-5987585ee1cf:image.png)
+    
+
+<aside>
+💡
+
+**修改样式后注意保存！**
+
+</aside>
+
+## 选择器
+
+作用：查找标签，设置样式
+
+**基础选择器**
+
+- 标签选择器
+    - 使用**标签名**作为选择器 → 选中**同名标签**设置**相同的格式**
+        - 例如：p,h1,div,a,img ……
+        - **无法差异化同名标签的样式**
+    - 代码演示
+        
+        ```
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>标签选择器</title>
+            <style>
+                p {
+                    color: red;
+                }
+            </style>
+        </head>
+        <body>
+            <p>这是一个P标签</p>
+            <p>这也是一个p标签</p>
+            
+        </body>
+        </html>
+        ```
+        
+        ![image.png](attachment:83c1d213-a5e5-4d93-ad35-eba28ec6fd50:image.png)
+        
+- 类选择器
+    
+    作用：查找标签，**差异化**设置标签的显示效果
+    
+    步骤：
+    
+    - 定义类选择器 → **.类名**
+    - 使用类选择器 → 标签添加**class=“类名”**
+    
+    ```html
+    <style>
+    	.red {
+    			color: red;
+    			 }
+    </style>
+    
+    <div class="red">这是div标签</div>
+    ```
+    
+    - 代码演示
+        
+        ```html
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>类选择器</title>
+            <style>
+                .red {
+                    color: red;
+                }
+        
+                .size {
+                    font-size: 30px;
+                }
+            </style>
+        </head>
+        <body>
+            <p class="red">111111</p>
+            <div class="red">222222</div>
+            <div class="size">444444</div>
+            <p class="red size">333333</p>
+        </body>
+        </html>
+        ```
+        
+        ![image.png](attachment:a2e037af-344c-44c1-9c44-906cc953025a:image.png)
+        
+    
+    <aside>
+    💡
+    
+    类名自定义，**不要用纯数字或中文**，尽量用英文命名
+    
+    一个标签可以使用**多个**类名，用**空格**隔开
+    
+    一个类选择器可以给**多个标签**使用
+    
+    开发习惯：类名**见名知意**，多个单词可以用-链接，例如：**news-hd**
+    
+    </aside>
+    
+- id选择器
+    
+    作用：查找标签，**差异化**设置标签的显示效果
+    
+    场景：id选择器一般**配合JS使用**，很少用来设置CSS样式
+    
+    步骤：
+    
+    - 定义id选择器 → #id名
+    - 使用id选择器 → 标签添加 id = “id名”
+    
+    ```html
+    <style>
+    	#red {
+    			color: red;
+    			 }
+    </style>
+    
+    <div id="red">这是div标签</div>
+    ```
+    
+    <aside>
+    💡
+    
+    **同一个id选择器在一个页面只能使用一次**
+    
+    </aside>
+    
+    代码演示：
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>id选择器</title>
+        <style>
+            #red {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- id选择器的使用-->
+        <div id="red">这是一个div标签</div>
+        
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:cbf212d2-e30c-4346-99bc-a4812f7d97a5:image.png)
+    
+- 通配符选择器
+    
+    **作用**：查找页面**所有标签，设置相同样式。**
+    
+    **通配符选择器**：***，不需要调用，**浏览器**自动**查找页面**所有**标签，设置相同的样式。
+    
+    ```html
+    * {
+    	color: red;
+    }
+    ```
+    
+    **使用场景：**
+    
+    在项目初期，用于清除默认样式，例如：每一行之间默认间隔
+    
+    ![image.png](attachment:8c4f1c61-7bae-42d6-95df-670cebbc6c03:image.png)
+    
+    **代码演示：**
+    
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div>这是一个div标签</div>
+        <p>这是一个p标签</p>
+    </body>
+    </html>
+    ```
+    
+    ![image.png](attachment:1de049b3-9ff2-4968-bc46-94c12462375c:image.png)
+    
+
+## 画盒子
+
+**目标：使用合适的选择器画盒子**
+
+**代码演示：**
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画盒子</title>
+    <style>
+        .red {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .orange {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">div1</div>
+    <div class="orange">div2</div>
+    
+</body>
+</html>
+```
+
+![image.png](attachment:b15f070f-420a-482b-baae-b51d059a9009:image.png)
+
+## 文字控制属性
