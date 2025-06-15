@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 偶数 */
+    li:nth-child(2n) {
+      background-color: blue;
+    }
+
+    /* 基数 */
+    li:nth-child(2n+1) {
+      background-color: green;
+    }
+
+    /* 3的倍数 */
+    li:nth-child(3n) {
+      background-color: red;
+    }
+
+    /* 3个以后的 */
+    li:nth-child(n+3) {
+      background-color: yellow;
+    }
+
+    /* 前3 */
+    li:nth-child(-n+3) {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>li1</li>
+    <li>li2</li>
+    <li>li3</li>
+    <li>li4</li>
+    <li>li5</li>
+    <li>li6</li>
+    <li>li7</li>
+    <li>li8</li>
+    <li>li9</li>
+    <li>li10</li>
+  </ul>
+
+</body>
+
+</html>
