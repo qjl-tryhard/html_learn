@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小米商城</title>
+  <!-- 首先清楚默认样式与列表默认样式 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .product {
+      margin: 50px auto;
+      width: 1226px;
+      height: 628px;
+      background-color: pink;
+    }
+
+    .left {
+      float: left;
+      width: 234px;
+      height: 628px;
+      background-color: skyblue;
+    }
+
+    .right {
+      /* 因为是块级元素，默认占一行 ，/因此需要使用浮动 */
+      float: right;
+      width: 978px;
+      height: 628px;
+      background-color: red;
+    }
+
+    .right li {
+      float: left;
+
+      /* 由于都挤到了一块，因此需要加外边距 */
+      margin-right: 14px;
+      margin-bottom: 14px;
+
+
+
+      width: 234px;
+      height: 300px;
+      background-color: orange;
+
+    }
+
+    .right li:nth-child(4n) {
+      /* 由由于父级宽度不够，所以要删除4、8个右外边距 */
+      margin-right: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 版心：左右结构，右面：八个产品 8个li标签-->
+  <div class="product">
+    <div class="left"></div>
+    <div class="right">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>
