@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>抖音解决方案</title>
+
+  <style>
+    /* 清楚默认样式 */
+    * {
+      margin: 0;
+      padding: 0;
+
+      box-sizing: border-box;
+    }
+
+
+    li {
+      list-style: none;
+    }
+
+
+    .box {
+      height: 418px;
+      width: 1200px;
+
+      /* 版心居中 */
+      margin: 50px auto;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    /* 给父级添加浮动 */
+    .box ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: space-between;
+      align-content: space-between;
+
+      padding: 90px 40px 90px 60px;
+      height: 418px;
+    }
+
+    /* 尺寸 */
+    .box li {
+      display: flex;
+      width: 500px;
+      height: 88px;
+      /* background-color: pink; */
+    }
+
+    .box .pic {
+      margin-right: 15px;
+    }
+
+    .box .pic img {
+      height: 88px;
+      width: 88px;
+      /* margin-right: 15px; */
+    }
+
+
+    .box .text h4 {
+      line-height: 40px;
+      font-size: 20px;
+      font-weight: 400;
+      color: #333;
+    }
+
+    .box .text p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <!-- ul>li{$}*4  构建有顺序的列表-->
+    <ul>
+      <li>
+        <div class="pic">
+          <img src="../250614/static/images/小图片背景.png" alt="">
+        </div>
+        <div class="text">
+          <h4>一键发布多端</h4>
+          <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+        </div>
+      </li>
+      <li>
+        <div class="pic">
+          <img src="../250614/static/images/小图片背景.png" alt="">
+        </div>
+        <div class="text">
+          <h4>一键发布多端</h4>
+          <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+        </div>
+      </li>
+      <li>
+        <div class="pic">
+          <img src="../250614/static/images/小图片背景.png" alt="">
+        </div>
+        <div class="text">
+          <h4>一键发布多端</h4>
+          <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+        </div>
+      </li>
+      <li>
+        <div class="pic">
+          <img src="../250614/static/images/小图片背景.png" alt="">
+        </div>
+        <div class="text">
+          <h4>一键发布多端</h4>
+          <p>发布视频到抖音短视频、西瓜视频及今日头条</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
