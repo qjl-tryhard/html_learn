@@ -1,5 +1,6 @@
 /* 首页css */
 
+/* 版心居中 */
 .wrapper {
   margin: 0 auto;
   width: 1200px;
@@ -72,8 +73,6 @@ body {
   width: 412px;
   height: 40px;
 
-
-
 }
 
 
@@ -145,7 +144,7 @@ body {
 }
 
 
-/* 测导航 */
+/* 左侧导航 */
 .banner .left {
   padding: 3px 20px;
   width: 190px;
@@ -395,7 +394,7 @@ body {
   height: 100px;
 }
 
-
+/* 版权 */
 .footer {
   margin-top: 60px;
   padding-top: 60px;

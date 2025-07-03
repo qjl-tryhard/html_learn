@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+    }
+
+    .box1 {
+      background-color: pink;
+      /* z-index默认为0，越大，优先级越高 */
+      z-index: 1;
+    }
+
+    .box2 {
+      z-index: 2;
+      background-color: blue;
+      left: 200px;
+      top: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">box1</div>
+  <div class="box2">box2</div>
+
+</body>
+
+</html>
