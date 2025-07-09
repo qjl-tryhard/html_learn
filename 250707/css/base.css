@@ -1,0 +1,31 @@
+/* 公共样式 */
+
+
+
+
+
+/* 去除页面默认边距 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* 去除列表修饰 */
+li {
+  list-style: none;
+}
+
+/* 设置字体 */
+body {
+  font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+
+/* 去除链接样式 */
+a {
+  color: #333;
+  text-decoration: none;
+}

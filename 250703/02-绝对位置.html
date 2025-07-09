@@ -19,14 +19,20 @@
     }
 
     .news {
-
-      /* position: relative; */
+      position: relative;
       width: 300px;
       height: 500px;
       margin: 0 auto;
       background-color: #fff;
     }
 
+
+    /* 
+    1. 脱标，不占位
+    2. 参照物：先找最近已经定位的祖先元素：如果所有祖先没有定位
+    参照浏览器可视区改位置
+    
+    */
     .news img {
       height: 200px;
       width: 300px;
@@ -36,7 +42,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.6);
       color: #fff;
     }
   </style>

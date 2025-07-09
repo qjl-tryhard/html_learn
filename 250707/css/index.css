@@ -1,0 +1,125 @@
+/* 首页样式 */
+
+
+/* 版心居中样式 */
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+body {
+  background-color: #f3f5f7;
+}
+
+
+
+/* 头部区域 */
+.header {
+  height: 100px;
+  background-color: #fff;
+}
+
+.header .wrapper {
+  display: flex;
+  padding-top: 29px;
+}
+
+
+/* logo右边距 */
+.logo {
+  margin-right: 70px;
+}
+
+
+/* a标签 */
+.logo a {
+  display: block;
+  width: 195px;
+  height: 40px;
+  background-image: url(../imgs/logo.png);
+  font-size: 0px;
+}
+
+/* 导航区域 */
+.nav ul {
+  display: flex;
+}
+
+
+/* 单个导航间距 */
+.nav ul li {
+  margin-right: 32px;
+}
+
+/* 导航中a标签 */
+.nav ul li a {
+  display: block;
+  padding: 6px 8px;
+  line-height: 27px;
+
+  font-size: 19px;
+}
+
+/* 添加下划线 */
+.nav li .active,
+.nav li a:hover {
+  border-bottom: 2px solid blue;
+}
+
+
+.search {
+  /* flex布局侧轴默认拉伸 */
+  display: flex;
+  margin-left: 60px;
+  padding-left: 19px;
+  padding-right: 12px;
+  border-radius: 20px;
+  background-color: #f3f5f7;
+  width: 412px;
+  height: 40px;
+
+}
+
+.search input {
+  flex: 1;
+  /* 边距0 */
+  border: 0;
+  /* 透明色 */
+  background-color: transparent;
+
+  /* 去掉表单焦点框框 */
+  outline: none;
+
+
+}
+
+.search input::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+
+
+
+/* flex布局父级为弹性布局，子级会弹性拉伸 虽然此处的a是行内标签，但是为弹性布局，因此会自动拉伸*/
+.search a {
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  background-image: url(../imgs/search.png);
+}
+
+.user {
+  margin-left: 32px;
+  margin-top: 4px;
+
+}
+
+.user img {
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
+
+  /* 专门用于处理行内块垂直方向对齐方式时使用 */
+  vertical-align: middle;
+  border-radius: 16px;
+}
